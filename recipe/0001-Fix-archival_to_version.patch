@@ -1,0 +1,13 @@
+--- setuptools_scm_git_archive/__init__.py.orig	2018-08-07 18:03:41.017700800 -0500
++++ setuptools_scm_git_archive/__init__.py	2018-08-07 18:04:12.444688100 -0500
+@@ -11,8 +11,8 @@
+ def archival_to_version(data):
+     trace('data', data)
+     versions = tags_to_versions(tag_re.findall(data.get('ref-names', '')))
+-    if versions:
+-        return meta(versions[0])
++    if len(list(versions)):
++        return meta(next(versions))
+ 
+ 
+ def parse(root):

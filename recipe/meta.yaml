@@ -10,8 +10,10 @@ source:
   sha256: 52425f905518247c685fc64c5fdba6e1e74443c8562e141c8de56059be0e31da
 
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
+  patches:
+    - 0001-Fix-archival_to_version.patch
 
 requirements:
   host:
