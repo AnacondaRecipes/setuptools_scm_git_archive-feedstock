@@ -16,6 +16,9 @@ build:
     - 0001-Fix-archival_to_version.patch
 
 requirements:
+  build:
+    - patch     # [not win]
+    - m2-patch  # [win]
   host:
     - python
     - pip
